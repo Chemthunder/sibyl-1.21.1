@@ -1,0 +1,33 @@
+{
+	"schemaVersion": 1,
+	"id": "sibyl",
+	"version": "${version}",
+	"name": "Sibyl",
+	"description": "Seizing full control of your client.",
+	"authors": [
+		"Chemthunder"
+	],
+	"contact": {
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/sibyl/icon.png",
+	"environment": "client",
+	"entrypoints": {
+		"client": [
+			"com.peak.sibyl.Sibyl"
+		],
+		"fabric-datagen": [
+			"com.peak.sibyl.SibylDataGenerator"
+		]
+	},
+	"mixins": [
+		"sibyl.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.15.11",
+		"minecraft": "~1.21.1",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}

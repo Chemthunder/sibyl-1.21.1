@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "package": "com.peak.sibyl.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "client": [
+    "BossbarRendererMixin",
+    "InGameHudMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "overwrites": {
+    "requireAnnotations": true
+  }
+}
