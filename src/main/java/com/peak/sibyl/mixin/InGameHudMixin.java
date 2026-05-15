@@ -2,7 +2,7 @@ package com.peak.sibyl.mixin;
 
 import com.llamalad7.mixinextras.injector.wrapmethod.WrapMethod;
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
-import com.peak.sibyl.Sibyl;
+import com.peak.sibyl.impl.Sibyl;
 import net.minecraft.client.gui.DrawContext;
 import net.minecraft.client.gui.hud.InGameHud;
 import net.minecraft.client.render.RenderTickCounter;
@@ -13,7 +13,7 @@ import org.spongepowered.asm.mixin.Mixin;
 /**
  * @author Chemthunder
  */
-@Mixin(InGameHud.class)
+@Mixin(value = InGameHud.class)
 public abstract class InGameHudMixin {
 
     @WrapMethod(method = "renderHotbar")
@@ -45,7 +45,7 @@ public abstract class InGameHudMixin {
     }
 
     @WrapMethod(method = "renderHealthBar")
-    private void sibyl$renderMainHud0(DrawContext context, PlayerEntity player, int x, int y, int lines, int regeneratingHeartIndex, float maxHealth, int lastHealth, int health, int absorption, boolean blinking, Operation<Void> original) {
+    private void sibyl$renderHearts(DrawContext context, PlayerEntity player, int x, int y, int lines, int regeneratingHeartIndex, float maxHealth, int lastHealth, int health, int absorption, boolean blinking, Operation<Void> original) {
         if (Sibyl.Config.renderHearts) {
             original.call(context, player, x, y, lines, regeneratingHeartIndex, maxHealth, lastHealth, health, absorption, blinking);
         }

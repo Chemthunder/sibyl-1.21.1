@@ -1,0 +1,8 @@
+{
+  "sibyl.midnightconfig.renderBossbar": "renderBossbar",
+  "sibyl.midnightconfig.renderCrosshair": "renderCrosshair",
+  "sibyl.midnightconfig.renderHearts": "renderHearts",
+  "sibyl.midnightconfig.renderHotbar": "renderHotbar",
+  "sibyl.midnightconfig.renderScoreboard": "renderScoreboard",
+  "sibyl.midnightconfig.title": "Sibyl"
+}
