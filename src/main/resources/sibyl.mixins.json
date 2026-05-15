@@ -4,7 +4,10 @@
   "compatibilityLevel": "JAVA_21",
   "client": [
     "BossbarRendererMixin",
-    "InGameHudMixin"
+    "ClientPlayerEntityMixin",
+    "InGameHudMixin",
+    "MinecraftClientMixin",
+    "TitleScreenMixin"
   ],
   "injectors": {
     "defaultRequire": 1

@@ -1,8 +1,17 @@
 {
+  "sibyl.midnightconfig.category.hud": "GUI & Hud",
+  "sibyl.midnightconfig.category.player": "The Player",
+  "sibyl.midnightconfig.category.window": "Minecraft Window",
+  "sibyl.midnightconfig.panoramaSpeed": "Panorama Spin Speed",
   "sibyl.midnightconfig.renderBossbar": "renderBossbar",
   "sibyl.midnightconfig.renderCrosshair": "renderCrosshair",
   "sibyl.midnightconfig.renderHearts": "renderHearts",
   "sibyl.midnightconfig.renderHotbar": "renderHotbar",
+  "sibyl.midnightconfig.renderPortalOverlay": "renderPortalOverlay",
+  "sibyl.midnightconfig.renderPowderSnowOverlay": "renderPowderSnowOverlay",
+  "sibyl.midnightconfig.renderPumpkinBlur": "renderPumpkinBlur",
   "sibyl.midnightconfig.renderScoreboard": "renderScoreboard",
-  "sibyl.midnightconfig.title": "Sibyl"
+  "sibyl.midnightconfig.renderSwingHand": "renderSwingHand",
+  "sibyl.midnightconfig.windowTitle": "Window Title",
+  "sibyl.title_text": "Sibyl#%s"
 }
