@@ -72,11 +72,25 @@ public abstract class InGameHudMixin {
             at = @At(
                     value = "INVOKE",
                     target = "Lnet/minecraft/client/gui/hud/InGameHud;renderOverlay(Lnet/minecraft/client/gui/DrawContext;Lnet/minecraft/util/Identifier;F)V",
-                    ordinal = 0
+                    ordinal = 1
             )
     )
     private void sibyl$pwoder(InGameHud instance, DrawContext context, Identifier texture, float opacity, Operation<Void> original) {
         if (Sibyl.Config.renderPowderSnowOverlay) {
+            original.call(instance, context, texture, opacity);
+        }
+    }
+
+    @WrapOperation(
+            method = "renderMiscOverlays",
+            at = @At(
+                    value = "INVOKE",
+                    target = "Lnet/minecraft/client/gui/hud/InGameHud;renderOverlay(Lnet/minecraft/client/gui/DrawContext;Lnet/minecraft/util/Identifier;F)V",
+                    ordinal = 0
+            )
+    )
+    private void sibyl$pumpkinBlur(InGameHud instance, DrawContext context, Identifier texture, float opacity, Operation<Void> original) {
+        if (Sibyl.Config.renderPumpkinBlur) {
             original.call(instance, context, texture, opacity);
         }
     }

@@ -5,6 +5,7 @@
   "client": [
     "BossbarRendererMixin",
     "ClientPlayerEntityMixin",
+    "DeathScreenMixin",
     "InGameHudMixin",
     "MinecraftClientMixin",
     "TitleScreenMixin"

@@ -75,6 +75,12 @@ public class Sibyl implements ClientModInitializer, DataGeneratorEntrypoint {
 
         @Entry(category = window, isSlider = true, min = -16, max = 16)
         public static int panoramaSpeed = 0;
+
+        @Entry(category = window)
+        public static boolean modInfoOnTitleScreen = true;
+
+        @Entry(category = player)
+        public static String customDeathMessage = "";
     }
 
     public static class Lang extends FabricLanguageProvider {

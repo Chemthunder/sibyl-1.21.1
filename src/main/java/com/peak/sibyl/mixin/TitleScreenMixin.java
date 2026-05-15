@@ -32,8 +32,23 @@ public abstract class TitleScreenMixin extends Screen {
 
     @Inject(method = "render", at = @At("HEAD"))
     private void sibyl$modOnTitleScreen(DrawContext context, int mouseX, int mouseY, float delta, CallbackInfo ci) {
-        int color = ColorHelper.Argb.withAlpha((int) this.backgroundAlpha * 255, 0xc6fc6f);
-        context.drawTextWithBackground(this.textRenderer, Text.translatable("sibyl.title_text", Sibyl.getModData().getVersion()), 2, this.height - 20, 16, color);
+        if (Sibyl.Config.modInfoOnTitleScreen) {
+            int color = ColorHelper.Argb.withAlpha(
+                    (int) this.backgroundAlpha * 255,
+                    0xc6fc6f
+            );
+
+            context.drawTextWithBackground(
+                    this.textRenderer,
+                    Text.translatable(
+                            "sibyl.title_text", Sibyl.getModData().getVersion()
+                    ),
+                    2,
+                    this.height - 20,
+                    16,
+                    color
+            );
+        }
     }
 
     @WrapOperation(
