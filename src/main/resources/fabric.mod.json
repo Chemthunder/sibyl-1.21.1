@@ -23,11 +23,9 @@
       "com.peak.sibyl.impl.Sibyl"
     ],
     "fabric-datagen": [
-      "com.peak.sibyl.impl.Sibyl"
+      "com.peak.sibyl.data.SibylData"
     ]
   },
-
-  "accessWidener": "sibyl.accesswidener",
 
   "mixins": [
     "sibyl.mixins.json"

@@ -3,14 +3,13 @@ package com.peak.sibyl.mixin;
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
 import com.peak.sibyl.impl.Sibyl;
+import com.peak.sibyl.impl.SibylConfig;
 import net.minecraft.client.gui.DrawContext;
 import net.minecraft.client.gui.RotatingCubeMapRenderer;
 import net.minecraft.client.gui.screen.Screen;
-import net.minecraft.client.gui.screen.SplashTextRenderer;
 import net.minecraft.client.gui.screen.TitleScreen;
 import net.minecraft.text.Text;
 import net.minecraft.util.math.ColorHelper;
-import org.jetbrains.annotations.Nullable;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
@@ -21,17 +20,13 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 public abstract class TitleScreenMixin extends Screen {
     @Shadow private float backgroundAlpha;
 
-    @Shadow
-    @Nullable
-    private SplashTextRenderer splashText;
-
     protected TitleScreenMixin(Text title) {
         super(title);
     }
 
     @Inject(method = "render", at = @At("HEAD"))
     private void sibyl$modOnTitleScreen(DrawContext context, int mouseX, int mouseY, float delta, CallbackInfo ci) {
-        if (Sibyl.Config.modInfoOnTitleScreen) {
+        if (SibylConfig.modInfoOnTitleScreen) {
             int color = ColorHelper.Argb.withAlpha(
                     (int) this.backgroundAlpha * 255,
                     0xc6fc6f
@@ -58,6 +53,13 @@ public abstract class TitleScreenMixin extends Screen {
             )
     )
     private void mindsEye$slowDownPanorama(RotatingCubeMapRenderer instance, DrawContext context, int width, int height, float alpha, float tickDelta, Operation<Void> original) {
-        original.call(instance, context, width, height, alpha, tickDelta + Sibyl.Config.panoramaSpeed);
+        original.call(
+                instance,
+                context,
+                width,
+                height,
+                alpha,
+                tickDelta + SibylConfig.panoramaSpeed
+        );
     }
 }

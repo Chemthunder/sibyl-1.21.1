@@ -2,7 +2,7 @@ package com.peak.sibyl.mixin;
 
 import com.llamalad7.mixinextras.injector.wrapmethod.WrapMethod;
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
-import com.peak.sibyl.impl.Sibyl;
+import com.peak.sibyl.impl.SibylConfig;
 import net.minecraft.client.gui.DrawContext;
 import net.minecraft.client.gui.hud.BossBarHud;
 import org.spongepowered.asm.mixin.Mixin;
@@ -15,7 +15,7 @@ public abstract class BossbarRendererMixin {
 
     @WrapMethod(method = "render")
     private void sibyl$renderBossbar(DrawContext context, Operation<Void> original) {
-        if (Sibyl.Config.renderBossbar) {
+        if (SibylConfig.renderBossbar) {
             original.call(context);
         }
     }

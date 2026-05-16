@@ -2,6 +2,10 @@
   "sibyl.midnightconfig.category.hud": "GUI & Hud",
   "sibyl.midnightconfig.category.player": "The Player",
   "sibyl.midnightconfig.category.window": "Minecraft Window",
+  "sibyl.midnightconfig.customDeathMessage": "Custom Death Message",
+  "sibyl.midnightconfig.customSplashMessage": "Custom Splash Message",
+  "sibyl.midnightconfig.hudCoordinateReadout": "Coordinates Display",
+  "sibyl.midnightconfig.modInfoOnTitleScreen": "Mod Information on Title Screen",
   "sibyl.midnightconfig.panoramaSpeed": "Panorama Spin Speed",
   "sibyl.midnightconfig.renderBossbar": "renderBossbar",
   "sibyl.midnightconfig.renderCrosshair": "renderCrosshair",
@@ -12,6 +16,7 @@
   "sibyl.midnightconfig.renderPumpkinBlur": "renderPumpkinBlur",
   "sibyl.midnightconfig.renderScoreboard": "renderScoreboard",
   "sibyl.midnightconfig.renderSwingHand": "renderSwingHand",
+  "sibyl.midnightconfig.title": "Sibyl",
   "sibyl.midnightconfig.windowTitle": "Window Title",
   "sibyl.title_text": "Sibyl#%s"
 }

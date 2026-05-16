@@ -2,7 +2,7 @@ package com.peak.sibyl.mixin;
 
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
-import com.peak.sibyl.impl.Sibyl;
+import com.peak.sibyl.impl.SibylConfig;
 import net.minecraft.client.gui.screen.DeathScreen;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.text.MutableText;
@@ -24,8 +24,8 @@ public abstract class DeathScreenMixin extends Screen {
             )
     )
     private static MutableText sibyl$master(String key, Operation<MutableText> original) {
-        if (!Sibyl.Config.customDeathMessage.isBlank()) {
-            return Text.literal(Sibyl.Config.customDeathMessage);
+        if (!SibylConfig.customDeathMessage.isBlank()) {
+            return Text.literal(SibylConfig.customDeathMessage);
         }
         return original.call(key);
     }
