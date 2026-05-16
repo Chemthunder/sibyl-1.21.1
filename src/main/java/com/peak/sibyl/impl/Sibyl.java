@@ -16,8 +16,8 @@ import org.slf4j.LoggerFactory;
  */
 @Environment(EnvType.CLIENT)
 public class Sibyl implements ClientModInitializer {
-	public static final String MOD_ID = "sibyl";
-	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
+    public static final String MOD_ID = "sibyl";
+    public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
     public void onInitializeClient() {
         try {
@@ -36,5 +36,10 @@ public class Sibyl implements ClientModInitializer {
 
     public static ModMetadata getModData() {
         return FabricLoader.getInstance().getModContainer(MOD_ID).get().getMetadata();
+    }
+
+    public static int convertToHex(String hexString) {
+        hexString = hexString.replace("#", "");
+        return Integer.parseInt(hexString, 16);
     }
 }

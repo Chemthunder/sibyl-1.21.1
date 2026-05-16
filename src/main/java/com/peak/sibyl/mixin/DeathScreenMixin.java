@@ -10,6 +10,9 @@ import net.minecraft.text.Text;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 
+/**
+ * @author Chemthunder
+ */
 @Mixin(DeathScreen.class)
 public abstract class DeathScreenMixin extends Screen {
     protected DeathScreenMixin(Text title) {

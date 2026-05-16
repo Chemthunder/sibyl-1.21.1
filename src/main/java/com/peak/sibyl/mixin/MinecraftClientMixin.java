@@ -6,7 +6,10 @@ import com.peak.sibyl.impl.SibylConfig;
 import net.minecraft.client.MinecraftClient;
 import org.spongepowered.asm.mixin.Mixin;
 
-@Mixin(MinecraftClient.class)
+/**
+ * @author Chemthunder
+ */
+@Mixin(value = MinecraftClient.class)
 public abstract class MinecraftClientMixin {
 
     @WrapMethod(method = "getWindowTitle")
