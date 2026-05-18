@@ -19,16 +19,15 @@ public class CoordinateReadoutEvent implements HudRenderCallback {
     public void onHudRender(DrawContext drawContext, RenderTickCounter renderTickCounter) {
         PlayerEntity player = MinecraftClient.getInstance().player;
         if (player == null) return;
-
-        if (SibylConfig.hudCoordinateReadout) {
-            drawContext.drawCenteredTextWithShadow(
-                    MinecraftClient.getInstance().textRenderer,
-                    Text.literal("[" + getPosition(player) + "]"),
-                    drawContext.getScaledWindowWidth() - 65,
-                    drawContext.getScaledWindowHeight() / 2  + 100,
-                    0xffffff
-            );
-        }
+        if (!SibylConfig.hudCoordinateReadout) return;
+        
+        drawContext.drawCenteredTextWithShadow(
+                MinecraftClient.getInstance().textRenderer,
+                Text.literal("[" + getPosition(player) + "]"),
+                drawContext.getScaledWindowWidth() - 65,
+                drawContext.getScaledWindowHeight() / 2  + 100,
+                0xffffff
+        );
     }
 
     private String getPosition(PlayerEntity player) {

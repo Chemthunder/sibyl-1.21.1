@@ -13,7 +13,7 @@ import org.spongepowered.asm.mixin.injection.At;
 /**
  * @author Chemthunder
  */
-@Mixin(DeathScreen.class)
+@Mixin(value = DeathScreen.class)
 public abstract class DeathScreenMixin extends Screen {
     protected DeathScreenMixin(Text title) {
         super(title);
@@ -26,7 +26,7 @@ public abstract class DeathScreenMixin extends Screen {
                     target = "Lnet/minecraft/text/Text;translatable(Ljava/lang/String;)Lnet/minecraft/text/MutableText;"
             )
     )
-    private static MutableText sibyl$master(String key, Operation<MutableText> original) {
+    private static MutableText sibyl$customDeathScreenTitle(String key, Operation<MutableText> original) {
         if (!SibylConfig.customDeathMessage.isBlank()) {
             return Text.literal(SibylConfig.customDeathMessage);
         }

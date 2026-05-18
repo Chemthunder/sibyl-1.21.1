@@ -69,7 +69,7 @@ public abstract class InGameHudMixin {
                     ordinal = 1
             )
     )
-    private void sibyl$pwoder(InGameHud instance, DrawContext context, Identifier texture, float opacity, Operation<Void> original) {
+    private void sibyl$powderSnowOverlay(InGameHud instance, DrawContext context, Identifier texture, float opacity, Operation<Void> original) {
         if (SibylConfig.renderPowderSnowOverlay) {
             original.call(instance, context, texture, opacity);
         }
@@ -83,7 +83,7 @@ public abstract class InGameHudMixin {
                     ordinal = 0
             )
     )
-    private void sibyl$pumpkinBlur(InGameHud instance, DrawContext context, Identifier texture, float opacity, Operation<Void> original) {
+    private void sibyl$pumpkinBlurOverlay(InGameHud instance, DrawContext context, Identifier texture, float opacity, Operation<Void> original) {
         if (SibylConfig.renderPumpkinBlur) {
             original.call(instance, context, texture, opacity);
         }

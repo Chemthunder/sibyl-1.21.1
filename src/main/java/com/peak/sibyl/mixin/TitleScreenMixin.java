@@ -19,7 +19,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 /**
  * @author Chemthunder
  */
-@Mixin(TitleScreen.class)
+@Mixin(value = TitleScreen.class)
 public abstract class TitleScreenMixin extends Screen {
     @Shadow private float backgroundAlpha;
 
@@ -27,8 +27,8 @@ public abstract class TitleScreenMixin extends Screen {
         super(title);
     }
 
-    @Inject(method = "render", at = @At("HEAD"))
-    private void sibyl$modOnTitleScreen(DrawContext context, int mouseX, int mouseY, float delta, CallbackInfo ci) {
+    @Inject(method = "render", at = @At(value = "HEAD"))
+    private void sibyl$modInfoOnTitleScreen(DrawContext context, int mouseX, int mouseY, float delta, CallbackInfo ci) {
         if (SibylConfig.modInfoOnTitleScreen) {
             int color = ColorHelper.Argb.withAlpha(
                     (int) this.backgroundAlpha * 255,
@@ -55,7 +55,7 @@ public abstract class TitleScreenMixin extends Screen {
                     target = "Lnet/minecraft/client/gui/RotatingCubeMapRenderer;render(Lnet/minecraft/client/gui/DrawContext;IIFF)V"
             )
     )
-    private void mindsEye$slowDownPanorama(RotatingCubeMapRenderer instance, DrawContext context, int width, int height, float alpha, float tickDelta, Operation<Void> original) {
+    private void sibyl$customPanoramaSpeed(RotatingCubeMapRenderer instance, DrawContext context, int width, int height, float alpha, float tickDelta, Operation<Void> original) {
         original.call(
                 instance,
                 context,

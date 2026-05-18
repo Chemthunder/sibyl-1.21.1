@@ -9,8 +9,7 @@
     "InGameHudMixin",
     "MinecraftClientMixin",
     "SplashTextRendererMixin",
-    "TitleScreenMixin",
-    "WindowMixin"
+    "TitleScreenMixin"
   ],
   "injectors": {
     "defaultRequire": 1

@@ -22,7 +22,7 @@ public abstract class SplashTextRendererMixin {
                     target = "Lnet/minecraft/client/gui/DrawContext;drawCenteredTextWithShadow(Lnet/minecraft/client/font/TextRenderer;Ljava/lang/String;III)V"
             )
     )
-    private void sibyl$render(DrawContext instance, TextRenderer textRenderer, String text, int centerX, int y, int color, Operation<Void> original) {
+    private void sibyl$customSplashMessage(DrawContext instance, TextRenderer textRenderer, String text, int centerX, int y, int color, Operation<Void> original) {
         if (SibylConfig.customSplashMessage.isBlank()) {
             original.call(instance, textRenderer, text, centerX, y, color);
         } else {

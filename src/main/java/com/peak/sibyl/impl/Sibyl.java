@@ -23,7 +23,10 @@ public class Sibyl implements ClientModInitializer {
         try {
             LOGGER.info("Sibyl has initialized!");
 
-            MidnightConfig.init(MOD_ID, SibylConfig.class);
+            MidnightConfig.init(
+                MOD_ID,
+                SibylConfig.class
+            );
 
             HudRenderCallback.EVENT.register(
                     new CoordinateReadoutEvent()
