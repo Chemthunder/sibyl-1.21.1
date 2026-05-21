@@ -2,7 +2,7 @@ package com.peak.sibyl.mixin;
 
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
-import com.peak.sibyl.impl.SibylConfig;
+import com.peak.sibyl.core.SibylConfig;
 import net.minecraft.client.gui.screen.DeathScreen;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.text.MutableText;

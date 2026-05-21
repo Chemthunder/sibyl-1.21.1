@@ -20,10 +20,10 @@
 
   "entrypoints": {
     "client": [
-      "com.peak.sibyl.impl.Sibyl"
+      "com.peak.sibyl.core.SibylInternal"
     ],
     "fabric-datagen": [
-      "com.peak.sibyl.data.SibylData"
+      "com.peak.sibyl.core.SibylData"
     ]
   },
 

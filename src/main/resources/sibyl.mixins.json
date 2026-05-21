@@ -3,13 +3,20 @@
   "package": "com.peak.sibyl.mixin",
   "compatibilityLevel": "JAVA_21",
   "client": [
+    "ArmorFeatureRendererMixin",
     "BossbarRendererMixin",
     "ClientPlayerEntityMixin",
     "DeathScreenMixin",
     "InGameHudMixin",
     "MinecraftClientMixin",
+    "SoundManagerMixin",
     "SplashTextRendererMixin",
-    "TitleScreenMixin"
+    "TitleScreenMixin",
+    "WindowMixin",
+    "toast.AdvancementToastMixin",
+    "toast.RecipeToastMixin",
+    "toast.SystemToastMixin",
+    "toast.TutorialToastMixin"
   ],
   "injectors": {
     "defaultRequire": 1

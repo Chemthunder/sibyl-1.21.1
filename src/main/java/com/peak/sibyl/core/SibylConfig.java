@@ -1,10 +1,13 @@
-package com.peak.sibyl.impl;
+package com.peak.sibyl.core;
 
 import eu.midnightdust.lib.config.MidnightConfig;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 
 /**
  * @author Chemthunder
  */
+@Environment(EnvType.CLIENT)
 public class SibylConfig extends MidnightConfig {
     private static final String hud = "hud";
     private static final String window = "window";
@@ -49,9 +52,35 @@ public class SibylConfig extends MidnightConfig {
     @Entry(category = window)
     public static String customSplashMessage = "";
 
+    @Entry(category = window)
+    public static WindowIconSet windowIcon = WindowIconSet.RELEASE;
+
+    @Entry(category = window)
+    public static boolean fullDeafen = false;
+
     @Entry(category = player)
     public static String customDeathMessage = "";
 
     @Entry(category = player)
     public static boolean hudCoordinateReadout = false;
+
+    @Entry(category = player)
+    public static boolean shouldRenderArmor = true;
+
+    @Entry(category = player)
+    public static boolean shouldShowTutorialToasts = true;
+
+    @Entry(category = player)
+    public static boolean shouldShowAdvancementToasts = true;
+
+    @Entry(category = player)
+    public static boolean shouldShowSystemToasts = true;
+
+    @Entry(category = player)
+    public static boolean shouldShowRecipeToasts = true;
+
+    public enum WindowIconSet {
+        RELEASE,
+        SNAPSHOT
+    }
 }

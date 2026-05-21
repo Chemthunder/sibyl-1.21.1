@@ -1,11 +1,9 @@
-package com.peak.sibyl.impl;
+package com.peak.sibyl.core;
 
-import com.peak.sibyl.impl.event.CoordinateReadoutEvent;
 import eu.midnightdust.lib.config.MidnightConfig;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
-import net.fabricmc.fabric.api.client.rendering.v1.HudRenderCallback;
 import net.fabricmc.loader.api.FabricLoader;
 import net.fabricmc.loader.api.metadata.ModMetadata;
 import org.slf4j.Logger;
@@ -15,7 +13,7 @@ import org.slf4j.LoggerFactory;
  * @author Chemthunder
  */
 @Environment(EnvType.CLIENT)
-public class Sibyl implements ClientModInitializer {
+public class SibylInternal implements ClientModInitializer {
     public static final String MOD_ID = "sibyl";
     public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
@@ -28,10 +26,7 @@ public class Sibyl implements ClientModInitializer {
                 SibylConfig.class
             );
 
-            HudRenderCallback.EVENT.register(
-                    new CoordinateReadoutEvent()
-            );
-
+            SibylEvents.register();
         } catch (Exception e) {
             LOGGER.error("Sibyl initialization has failed! {}", e.getLocalizedMessage());
         }

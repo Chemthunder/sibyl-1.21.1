@@ -8,7 +8,7 @@
 
 # Fixes
 - Make `CoordinateReadout` not show when in F1 (unless allowed)
-- Make all Config options fully client-side (they aren't for some reason)
+- ~~Make all Config options fully client-side (they aren't for some reason)~~
 - Subclass the `CoordinateReadoutEvent` into a `SibylEvents` class, then have a method to register all
 
 # If I Can I Should

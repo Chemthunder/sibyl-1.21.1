@@ -2,8 +2,8 @@ package com.peak.sibyl.mixin;
 
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
-import com.peak.sibyl.impl.Sibyl;
-import com.peak.sibyl.impl.SibylConfig;
+import com.peak.sibyl.core.SibylInternal;
+import com.peak.sibyl.core.SibylConfig;
 import net.minecraft.client.gui.DrawContext;
 import net.minecraft.client.gui.RotatingCubeMapRenderer;
 import net.minecraft.client.gui.screen.Screen;
@@ -38,7 +38,7 @@ public abstract class TitleScreenMixin extends Screen {
             context.drawTextWithBackground(
                     this.textRenderer,
                     Text.translatable(
-                            "sibyl.title_text", Sibyl.getModData().getVersion()
+                            "sibyl.title_text", SibylInternal.getModData().getVersion()
                     ),
                     2,
                     this.height - 20,

@@ -1,5 +1,7 @@
-package com.peak.sibyl.data;
+package com.peak.sibyl.core;
 
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
@@ -11,6 +13,7 @@ import java.util.concurrent.CompletableFuture;
 /**
  * @author Chemthunder
  */
+@Environment(EnvType.CLIENT)
 public class SibylData implements DataGeneratorEntrypoint {
     public void onInitializeDataGenerator(FabricDataGenerator fabricDataGenerator) {
         FabricDataGenerator.Pack pack = fabricDataGenerator.createPack();
@@ -47,6 +50,15 @@ public class SibylData implements DataGeneratorEntrypoint {
             translationBuilder.add("sibyl.midnightconfig.customSplashMessage", "Custom Splash Message");
             translationBuilder.add("sibyl.midnightconfig.modInfoOnTitleScreen", "Mod Information on Title Screen");
             translationBuilder.add("sibyl.midnightconfig.hudCoordinateReadout", "Coordinates Display");
+            translationBuilder.add("sibyl.midnightconfig.shouldRenderArmor", "Armor Rendering");
+            translationBuilder.add("sibyl.midnightconfig.fullDeafen", "Fully Deafen");
+            translationBuilder.add("sibyl.midnightconfig.windowIcon", "Window Icon");
+            translationBuilder.add("sibyl.midnightconfig.menuScreenTitle", "Menu Screen Title");
+
+            registerConfig(translationBuilder, "shouldShow", "TutorialToasts");
+            registerConfig(translationBuilder, "shouldShow", "AdvancementToasts");
+            registerConfig(translationBuilder, "shouldShow", "SystemToasts");
+            registerConfig(translationBuilder, "shouldShow", "RecipeToasts");
         }
 
         private void registerConfig(TranslationBuilder translationBuilder, String prefix, String option) {

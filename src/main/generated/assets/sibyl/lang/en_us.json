@@ -4,7 +4,9 @@
   "sibyl.midnightconfig.category.window": "Minecraft Window",
   "sibyl.midnightconfig.customDeathMessage": "Custom Death Message",
   "sibyl.midnightconfig.customSplashMessage": "Custom Splash Message",
+  "sibyl.midnightconfig.fullDeafen": "Fully Deafen",
   "sibyl.midnightconfig.hudCoordinateReadout": "Coordinates Display",
+  "sibyl.midnightconfig.menuScreenTitle": "Menu Screen Title",
   "sibyl.midnightconfig.modInfoOnTitleScreen": "Mod Information on Title Screen",
   "sibyl.midnightconfig.panoramaSpeed": "Panorama Spin Speed",
   "sibyl.midnightconfig.renderBossbar": "renderBossbar",
@@ -16,7 +18,13 @@
   "sibyl.midnightconfig.renderPumpkinBlur": "renderPumpkinBlur",
   "sibyl.midnightconfig.renderScoreboard": "renderScoreboard",
   "sibyl.midnightconfig.renderSwingHand": "renderSwingHand",
+  "sibyl.midnightconfig.shouldRenderArmor": "Armor Rendering",
+  "sibyl.midnightconfig.shouldShowAdvancementToasts": "shouldShowAdvancementToasts",
+  "sibyl.midnightconfig.shouldShowRecipeToasts": "shouldShowRecipeToasts",
+  "sibyl.midnightconfig.shouldShowSystemToasts": "shouldShowSystemToasts",
+  "sibyl.midnightconfig.shouldShowTutorialToasts": "shouldShowTutorialToasts",
   "sibyl.midnightconfig.title": "Sibyl",
+  "sibyl.midnightconfig.windowIcon": "Window Icon",
   "sibyl.midnightconfig.windowTitle": "Window Title",
   "sibyl.title_text": "Sibyl#%s"
 }

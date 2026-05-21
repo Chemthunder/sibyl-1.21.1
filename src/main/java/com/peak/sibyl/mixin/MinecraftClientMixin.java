@@ -2,7 +2,7 @@ package com.peak.sibyl.mixin;
 
 import com.llamalad7.mixinextras.injector.wrapmethod.WrapMethod;
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
-import com.peak.sibyl.impl.SibylConfig;
+import com.peak.sibyl.core.SibylConfig;
 import net.minecraft.client.MinecraftClient;
 import org.spongepowered.asm.mixin.Mixin;
 
