@@ -47,22 +47,4 @@ public abstract class TitleScreenMixin extends Screen {
             );
         }
     }
-
-    @WrapOperation(
-            method = "renderPanoramaBackground",
-            at = @At(
-                    value = "INVOKE",
-                    target = "Lnet/minecraft/client/gui/RotatingCubeMapRenderer;render(Lnet/minecraft/client/gui/DrawContext;IIFF)V"
-            )
-    )
-    private void sibyl$customPanoramaSpeed(RotatingCubeMapRenderer instance, DrawContext context, int width, int height, float alpha, float tickDelta, Operation<Void> original) {
-        original.call(
-                instance,
-                context,
-                width,
-                height,
-                alpha,
-                tickDelta + SibylConfig.panoramaSpeed
-        );
-    }
 }

@@ -12,6 +12,7 @@ public class SibylConfig extends MidnightConfig {
     private static final String hud = "hud";
     private static final String window = "window";
     private static final String player = "player";
+    private static final String experimental = "experimental";
 
     @Entry(category = hud)
     public static boolean renderHotbar = true;
@@ -78,6 +79,9 @@ public class SibylConfig extends MidnightConfig {
 
     @Entry(category = player)
     public static boolean shouldShowRecipeToasts = true;
+
+    @Entry(category = experimental, isSlider = true, min = -1, max = 1)
+    public static float itemSize = 1.0f;
 
     public enum WindowIconSet {
         RELEASE,

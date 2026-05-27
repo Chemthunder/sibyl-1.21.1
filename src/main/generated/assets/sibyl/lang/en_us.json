@@ -1,4 +1,5 @@
 {
+  "sibyl.midnightconfig.category.experimental": "Experimental",
   "sibyl.midnightconfig.category.hud": "GUI & Hud",
   "sibyl.midnightconfig.category.player": "The Player",
   "sibyl.midnightconfig.category.window": "Minecraft Window",
@@ -6,6 +7,7 @@
   "sibyl.midnightconfig.customSplashMessage": "Custom Splash Message",
   "sibyl.midnightconfig.fullDeafen": "Fully Deafen",
   "sibyl.midnightconfig.hudCoordinateReadout": "Coordinates Display",
+  "sibyl.midnightconfig.itemSize": "GUI Item Size",
   "sibyl.midnightconfig.menuScreenTitle": "Menu Screen Title",
   "sibyl.midnightconfig.modInfoOnTitleScreen": "Mod Information on Title Screen",
   "sibyl.midnightconfig.panoramaSpeed": "Panorama Spin Speed",

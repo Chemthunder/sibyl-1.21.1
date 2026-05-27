@@ -33,6 +33,7 @@ public class SibylData implements DataGeneratorEntrypoint {
             translationBuilder.add("sibyl.midnightconfig.category.hud", "GUI & Hud");
             translationBuilder.add("sibyl.midnightconfig.category.window", "Minecraft Window");
             translationBuilder.add("sibyl.midnightconfig.category.player", "The Player");
+            translationBuilder.add("sibyl.midnightconfig.category.experimental", "Experimental");
 
             registerConfig(translationBuilder, "render", "Hotbar");
             registerConfig(translationBuilder, "render", "Scoreboard");
@@ -54,6 +55,8 @@ public class SibylData implements DataGeneratorEntrypoint {
             translationBuilder.add("sibyl.midnightconfig.fullDeafen", "Fully Deafen");
             translationBuilder.add("sibyl.midnightconfig.windowIcon", "Window Icon");
             translationBuilder.add("sibyl.midnightconfig.menuScreenTitle", "Menu Screen Title");
+
+            translationBuilder.add("sibyl.midnightconfig.itemSize", "GUI Item Size");
 
             registerConfig(translationBuilder, "shouldShow", "TutorialToasts");
             registerConfig(translationBuilder, "shouldShow", "AdvancementToasts");
